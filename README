@@ -1,0 +1,75 @@
+Fast, scalable, and automated identification of articles for biodiversity and macroecological datasets
+
+Cornford et al., 2020
+
+
+This directory contains the code and data needed to reproduce the analyses found in the above titled paper, in addition to demo code which facilitates the quick and easy fitting/application of text-classification models given specified csv files containing relevant, irrelevant and unclassified texts.
+Before running any code, load and activate the conda python environment specified in "python_env.yml" using "$ conda env create -f python_env.yml" and either "$ source activate python_env" or "$ coda activate python_env". To Check the environment installed successfully use "conda list", which should list installed functions/modules.
+
+/demo
+	/Code
+	Here, you can find the code needed to train/save logisitic regression and convolutional neural network classifiers (train_save_classifier_demo.py). You can also apply saved classifiers to unclassified texts (load_apply_classifer_demo.py). 
+
+	Training requires the specification of two input files (within the python code file), relevant and irrelevant texts.
+	Application requires the specification of one input file (within the python code), unclassifieds.
+
+	/Data
+	This contains the additional data required by the code files, including examples of positives, negatives and unclassifieds (in csv format, with columns including "Title" and "Abstract"), in addition to stop-words (NLTK_stop_words.txt). GloVe embeddings can be downloaded from http://nlp.stanford.edu/data/wordvecs/glove.6B.zip.
+
+	/Results
+	Model files will be saved here, as will classified texts.
+
+
+
+/workflow
+	/Code
+	Using the code and associated data/results, our analyses, as presented in the paper, can be reproduced.
+
+	The run_workflow.sh file outlines the overall workflow and if run will conduct all analyses (R code files). 
+
+	Code for preparing texts (prep_all_texts.py), fitting all combinations of classifiers (train_classifiers.py, train_predcits_classifiers.py), and analysing classifier performance (model_analysis_lpi.R, model_analysis_predicts.R) is included (Methods 2.2).
+
+	Real-world benefits of applying the best performing text classifiers associated with the LPI and PREDICTS data are assessed in "search_analysis.R" (Methods 2.3).
+
+	Code to test the consequences of altering the number of training documents used and the impact of including true negatives is provided (man_class_process.R, lr_npos_augment_fit.py, lr_npos_augment_anaylsis.R, Methods 2.4)
+
+	We extract and visualise the feature weights of the best LR model with lr_feature_extraction.py and word_clouds.R (Methods 2.5)
+
+	Additional analyses, as found in the Appendices to our paper, include determining the effect of using different sets of pseudo-negatives in the training data (resample_models.py, resamp_analysis.R, Appendix S2) and the potential consequences of the GloVe embeddings not being available for certain, potentially important, words (glove_text_coverage.py, lra_pred_glove_stop.R, Appendix S3).
+
+
+	/Data
+		/Text
+		Consists of the texts needed to train the classifiers.
+		Note: due to file size limits, the negative texts are provided in 3 separate csv files. These should be combined into a single file before use. e.g. pd.concat([neg1,neg2,neg3]). 
+		The GloVe embeddings are also omitted due to file size but can be found at: http://nlp.stanford.edu/data/wordvecs/glove.6B.zip
+	
+	Also found in the data directory are the NLTK stop words.	
+
+
+	/Results
+	All results files are those produced/used in our actual analysis.
+
+	<dataset>_man_class... files are used/produced when analysing the effect of training set size and the use of true-positives on classifier performance.
+
+		/Models
+			/LR
+			This directory stores fitted, logistic classifiers and the associated text vectorizers.
+			Those already in the directory correspond to the LR A models from our manuscript.
+
+		/Model_metrics
+			/LR
+			Various results files relevant to fitting and assessing logistic models.
+			
+			/NN
+			Results files relevant to fitting and assessing neural network models.
+		
+		/Scopus_lpi
+		Files containing the manually classified texts associated with targeted literature searches.
+		
+		/WoK_predicts
+		Files containing the manually classified texts associated with targeted literature searches.
+		
+		/Figs
+		If the analysis code files are run (in the order specified in run_workflow.sh), this directory contains the results figures used in our manuscript.
+

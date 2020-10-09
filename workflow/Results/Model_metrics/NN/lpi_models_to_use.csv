@@ -1,0 +1,4 @@
+"","X.1","X","Attribute","Model_number","Classifier","Stop_words","Unknown_words","Date_Time","Dataset","avAUC","AUC_loCI","AUC_upCI","Train_test_time","Test_AUC"
+"10","91","91","TitleAbstract","18","Neural Network","NLTK_stop_words.txt","rand","2018-11-09 13:28:00.167803","lpi",0.977863652441369,0.969372441201639,0.986354863681099,5879.635662,0.99106699751861
+"5","41","41","TitleAbstract","13","Neural Network","None","remove","2018-11-09 13:27:53.443755","lpi",0.975340853517878,0.966234155367301,0.984447551668455,7762.385042,0.987158808933002
+"15","141","141","Title","6","Neural Network","NLTK_stop_words.txt","rand","2018-11-09 13:28:19.041765","lpi",0.952859607843137,0.940401015912451,0.965318199773823,4424.395175,0.975186104218362

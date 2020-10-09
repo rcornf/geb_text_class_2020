@@ -1,0 +1,4 @@
+"","Attribute","Model_number","Classifier","Stop_words","Unknown_words","Date_Time","Dataset","avAUC","AUC_loCI","AUC_upCI","Test_AUC","Train_test_time"
+"1","TitleAbstract","18","Neural Network","NLTK_stop_words.txt","rand","2020-09-16 16:25:41.253664","predicts",0.983597603946441,0.975730630633513,0.991464577259369,0.98019801980198,8505.960131
+"2","TitleAbstract","13","Neural Network","None","remove","2020-09-16 18:47:34.774250","predicts",0.986307006946542,0.978708654524505,0.993905359368579,0.984193156157721,8108.297742
+"3","Title","6","Neural Network","NLTK_stop_words.txt","rand","2020-09-16 21:02:51.853622","predicts",0.970443219571127,0.959944855158166,0.980941583984087,0.961264547507382,7724.614206

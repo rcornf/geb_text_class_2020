@@ -1,0 +1,4 @@
+"","X","Attribute","Model_number","Classifier","Stop_words","Stemmer","Weighting","Feature","Ngram_range","Date_Time","Dataset","avAUC","AUC_loCI","AUC_upCI","Test_AUC","Train_test_time"
+"1","1","TitleAbstract","149","LogisticRegression","over_0.85_df","lancaster","tf-idf","word","(1, 2)","2018-10-10 02:12:08.365276","predicts",0.993554313903151,0.989452367830311,0.997656259975991,0.989838457529964,97.846943
+"2","11","TitleAbstract","125","LogisticRegression","None","None","tf","word","(1, 2)","2020-09-16 16:25:07.569135","predicts",0.987078425450518,0.980788662376996,0.993368188524041,0.972034045509814,14.090489
+"3","21","Title","149","LogisticRegression","over_0.85_df","lancaster","tf-idf","word","(1, 2)","2020-09-16 16:25:31.770590","predicts",0.978565136413974,0.970300100990884,0.986830171837063,0.962827861733542,0.947473
