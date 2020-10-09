@@ -2,6 +2,8 @@ Fast, scalable, and automated identification of articles for biodiversity and ma
 
 Cornford et al., 2020
 
+https://zenodo.org/badge/302323925.svg
+
 
 This directory contains the code and data needed to reproduce the analyses found in the above titled paper, in addition to demo code which facilitates the quick and easy fitting/application of text-classification models given specified csv files containing relevant, irrelevant and unclassified texts.
 Before running any code, load and activate the conda python environment specified in "python_env.yml" using "$ conda env create -f python_env.yml" and either "$ source activate python_env" or "$ coda activate python_env". To Check the environment installed successfully use "conda list", which should list installed functions/modules.
