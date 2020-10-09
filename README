@@ -2,7 +2,7 @@ Fast, scalable, and automated identification of articles for biodiversity and ma
 
 Cornford et al., 2020
 
-https://zenodo.org/badge/latestdoi/302323925
+<a href="https://zenodo.org/badge/latestdoi/302323925"><img src="https://zenodo.org/badge/302323925.svg" alt="DOI"></a>
 
 
 This directory contains the code and data needed to reproduce the analyses found in the above titled paper, in addition to demo code which facilitates the quick and easy fitting/application of text-classification models given specified csv files containing relevant, irrelevant and unclassified texts.
